@@ -4,3 +4,5 @@ A simple timer app can be crafted with HTML, CSS, and JavaScript. In HTML, struc
 
 <br><br>
 To add favicon and file setup
+<br>
+To add dialouge box

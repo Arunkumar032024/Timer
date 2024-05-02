@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer</title>
     <!-- To add favicon icon -->
-    <link rel="shortcut icon" href="icon/favicon.svg" type="image/x-icon">
+    <link rel="icon" href="icons/favicon.svg" type="image/x-icon">
 
     <!-- To add font awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -13,9 +14,59 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="app.css">
 </head>
+
 <body>
-    
+    <!-- header section design -->
+    <header>
+        <h1><i class="fa-solid fa-hourglass-half"></i></i>Timer</h1>
+        <button id="setTimer">Set Timer</button>
+    </header>
+    <!-- End header section design -->
+
+    <!-- main section design -->
+    <main>
+        <!-- dialogue box design -->
+        <div class="dialouge-box">
+            <p>Set Timer</p>
+            <div class="input-box">
+                    <select id="hour">
+                        <option selected>hour</option>
+                    </select>
+                    <select id="min">
+                        <option selected>min</option>
+                    </select>
+                    <select id="sec">
+                        <option selected>sec</option>
+                    </select>
+            </div>
+            <p>Set Tone</p>
+            <div class="input-box">
+                <select id="tone-set">
+                    <option selected>Default</option>
+                    <option value="">
+                        <label for="tone">Add ringtone</label>
+                        <input type="file" id="tone" />
+                    </option>
+                </select>
+            </div>
+
+            <div class="buttons">
+                <button id="done" class="active"><i class="fa-solid fa-check"></i>Done</button>
+                <button id="cancel"><i class="fa-solid fa-xmark"></i>Cancel</button>
+            </div>
+        </div>
+        <!-- End dialogue box design -->
+
+        <!-- timer box design  -->
+        <div class="timer-box">
+            
+        </div>
+        <!-- End timer box design  -->
+    </main>
+    <!-- End main section design -->
+
 
     <script src="app.js"></script>
 </body>
+
 </html>

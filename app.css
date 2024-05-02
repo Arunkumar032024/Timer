@@ -6,4 +6,133 @@
     box-sizing: border-box;
     font-family: "Work Sans", sans-serif;
 }
+/* header section style  */
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+body{
+    background-color: #640D6B;
+}
+header h1{
+    font-size: 1.725rem;
+    font-weight: 500;
+    text-shadow: 2px 2px #E65C19;
+    color: #E65C19;
+}
+header h1 i{
+    margin-right: 10px;
+}
 
+header button{
+    border: 1px solid #E65C19;
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: transparent;
+    color: #E65C19;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+header button:hover{
+    background-color: #E65C19;
+    color: #640D6B;
+}
+header button:active{
+    transform: scale(0.97);
+}
+/* End header section style  */
+
+
+/* main section style */
+/* dialouge box style */
+main .dialouge-box{
+    width: 100%;
+    max-width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 1px #E65C19;
+    display: none;
+    z-index: 1000;
+}
+.dialouge-box.show{
+    display: block;
+}
+
+.dialouge-box .input-box,
+.dialouge-box .buttons{
+    padding: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.dialouge-box p{
+    font-size: 18px;
+    font-weight: 700;
+    color: #640D6B;
+    margin-bottom: 5px;
+    margin-left: 15px;
+}
+
+.input-box select{
+    -webkit-appearance: none;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #640D6B;
+    text-align: center;
+    border-radius: 2px;
+    outline: none;
+    position: relative;
+    font-size: 18px;
+}
+.input-box select.color{
+    color: #640D6B;
+}
+.input-box:nth-of-type(2) select{
+    width: 100%;
+}
+
+.input-box:nth-of-type(2) input{
+    display: none;
+}
+
+.buttons button{
+    padding: 10px 20px;
+    border: 1px solid #640D6B;
+    color: #640D6B;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    outline: none;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.buttons button.active{
+    background-color: #640D6B;
+    color: #fff;
+}
+.buttons button:hover{
+    background-color: #640D6B;
+    color: #fff;
+    filter: brightness(1.3);
+}
+
+.buttons button i{
+    margin-right: 10px;
+}
+/* End dialouge box style */
+/* End main section style */
