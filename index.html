@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer</title>
     <!-- To add favicon icon -->
-    <link rel="shortcut icon" href="icon/favicon.svg" type="image/x-icon">
+    <link rel="icon" href="icons/favicon.svg" type="image/x-icon">
 
     <!-- To add font awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -13,9 +14,40 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="app.css">
 </head>
-<body>
-    
 
+<body>
+    <!-- main section design -->
+    <main class="container">
+        <h1><i class="fa-solid fa-stopwatch"></i>Timer</h1>
+        <div class="timer">
+            <div class="select hour-select">
+                <select id="hour"></select>
+            </div>
+            <span id="colon">:</span>
+            <div class="select min-select">
+                <select id="min"></select>
+            </div>
+            <span id="colon">:</span>
+            <div class="select sec-select">
+                <select id="sec"></select>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="reset-btn"><i class="fa-solid fa-power-off"></i></button>
+            <button id="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+            <button id="count-btn"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+        </div>
+
+        <div class="count-box">
+            <div class="count">
+                <p><span id="start">00:00:00</span><span id="stop">00:00:00</span></p>
+                <p id="stop-time">00:00.00</p>
+            </div>
+            
+        </div>
+    </main>
+    <!-- End main section design -->
     <script src="app.js"></script>
 </body>
+
 </html>

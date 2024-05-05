@@ -6,4 +6,183 @@
     box-sizing: border-box;
     font-family: "Work Sans", sans-serif;
 }
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #feefad;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 592px;
+    text-align: center;
+    background-color: #68d2e8;
+    padding: 25px;
+    border-radius: 5px;
+    color: #b51b75;
+    box-shadow: 5px 5px 5px #b51b75;
+}
+
+.container h1{
+    font-size: 30px;
+    padding: 20px 0;
+}
+.container h1 i{
+    margin-right: 10px;
+}
+.container .timer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.timer .select{
+    position: relative;
+}
+
+.timer select{
+    -webkit-appearance: none;
+    font-size: 6rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #b51b75;
+}
+.timer select::-webkit-scrollbar{
+    width: 0px;
+}
+
+.timer .select::after{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: 600;
+    color: #b51b75;
+}
+.timer .min-select::after{
+    content: 'MINUTE';
+}
+.timer .sec-select::after{
+    content: 'SECOND';
+}
+.timer .hour-select::after{
+    content: 'HOUR';
+}
+.timer #colon{
+    font-size: 3rem;
+}
+
+
+.container .buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.buttons button{
+    border: 0;
+    outline: 0;
+    padding: 15px;
+    background-color: #b51b75;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+button i{
+    font-size: 1.5rem;
+    color: #68d2e8;
+    
+    position: relative;
+}
+button i:hover:after{
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+    background-color: #b51b75;
+    color: #feefad;
+    padding: 5px;
+}
+
+button i.fa-play:hover::after{
+    content: 'Play';
+}
+button i.fa-pause:hover::after{
+    content: 'Pause';
+}
+button i.fa-power-off:hover::after{
+    content: 'Reset';
+}
+button i.fa-arrow-rotate-right:hover::after{
+    content: 'Count';
+}
+button i.active{
+    color: #feefad;
+}
+
+.container .count-box{
+    width: 100%;
+    margin-top: 20px;
+    /* display: none; */
+}
+.container .count-box.active{
+    display: block;
+}
+.count-box .count{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #83dcee;
+}
+.count p{
+    font-weight: 600;
+}
+.count p:nth-child(1){
+    display: flex;
+    flex-direction: column;
+}
+.count #count-id{
+    font-size: 1.5rem;
+}
+.count #duration{
+    font-size: 0.813rem;
+}
+.count #stop-time{
+    font-size: 2rem;
+}
+
+@media (max-width: 592px) {
+    .timer select{
+        font-size: 3rem;
+
+    }
+    .timer .select::after{
+        font-size: 10px;
+        bottom: -2px;
+    }
+    .timer #colon{
+        font-size: 2rem;
+    }
+
+    .timer select::after{
+        font-size: 12px;
+        bottom: -10px;
+    }
+}
