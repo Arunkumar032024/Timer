@@ -14,6 +14,8 @@ function setTimer(){
 function addOption(type, count){
     let opt = document.createElement('option');
     opt.innerHTML = count < 10 ? `0${count}` : count;
+    opt.value = count;
+    type.appendChild(opt);
 }
 // add hour options
 for (let i = 0; i < 12; i++){
