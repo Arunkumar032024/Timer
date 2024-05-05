@@ -17,7 +17,14 @@
 <body>
     <!-- main section design -->
     <main class="container">
+        <!-- ringtone section  -->
+        <audio>
+            <source src="tone/song.mp3" type="audio/mp3">
+        </audio>
+        <!-- heading section  -->
         <h1><i class="fa-solid fa-hourglass"></i>Timer</h1>
+
+        <!-- timer section  -->
         <div class="timer">
             <div class="select hour-select">
                 <select id="hour"></select>
@@ -31,19 +38,16 @@
                 <select id="sec"></select>
             </div>
         </div>
+        <!-- buttons section  -->
         <div class="buttons">
-            <button id="reset-btn"><i class="fa-solid fa-power-off"></i></button>
-            <button id="play-pause-btn"><i class="fa-solid fa-play"></i></button>
-            <button id="count-btn"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+            <button id="reset-btn" class="pointer-none"><i class="fa-solid fa-power-off"></i></button>
+            <button id="play-btn"><i class="fa-solid fa-play"></i></button>
+            <button id="pause-btn" class="hide"><i class="fa-solid fa-pause"></i></button>
+            <button id="stop-btn" class="hide"><i class="fa-solid fa-square"></i></button>
+            <button id="clear-btn"><i class="fa-solid fa-arrow-rotate-right"></i></button>
         </div>
-
-        <div class="count-box">
-            <div class="count">
-                <p><span id="start">00:00:00</span><span id="stop">00:00:00</span></p>
-                <p id="stop-time">00:00.00</p>
-            </div>
-            
-        </div>
+        <!-- div is used to saved timer history  -->
+        <div class="count-box"></div>
     </main>
     <!-- End main section design -->
     <script src="app.js"></script>

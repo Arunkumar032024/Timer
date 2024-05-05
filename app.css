@@ -15,7 +15,9 @@ body{
     align-items: center;
     justify-content: center;
 }
-
+.pointer-none{
+    pointer-events: none;
+}
 .container{
     width: 90%;
     margin: 0 auto;
@@ -107,6 +109,9 @@ button i{
     color: #E2DFD0;
     position: relative;
 }
+button.hide{
+    display: none;
+}
 button i:hover:after{
     position: absolute;
     bottom: -40px;
@@ -128,16 +133,15 @@ button i.fa-power-off:hover::after{
     content: 'Reset';
 }
 button i.fa-arrow-rotate-right:hover::after{
-    content: 'Count';
+    content: 'Clear';
 }
-button i.active{
+button.active i{
     color: #F97300;
 }
 
 .container .count-box{
     width: 100%;
     margin-top: 20px;
-    /* display: none; */
 }
 .container .count-box.active{
     display: block;
