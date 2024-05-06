@@ -99,6 +99,7 @@ function stopTone(result){
     }else{
         clearInterval(toneduration);
         tone.pause();
+        clearInterval(timer);
     }
 }
 
