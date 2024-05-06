@@ -99,7 +99,7 @@ function stopTone(result){
     }else{
         clearInterval(toneduration);
         tone.pause();
-        clearInterval(timer);
+        resetTimer();
     }
 }
 
@@ -205,7 +205,7 @@ function stopTimer(){
 function resetTimer(){
     [hourSelect.value, minSelect.value, secSelect.value] = [0, 0, 0];
     clearInterval(timer);
-    // timer = null;
+    timer = null;
 }
 
 // function to add option in select element 
